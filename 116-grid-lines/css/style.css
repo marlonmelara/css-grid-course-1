@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #eef;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    20,
+    1fr
+  ); /* Crea una cuadrícula con 20 columnas de igual tamaño */
+  grid-template-rows: repeat(
+    4,
+    1fr
+  ); /* Crea una cuadrícula con 4 filas de igual tamaño */
+  width: 90%;
+  max-width: 700px;
+  height: 500px;
+  margin: 20px auto;
+  background-color: #fff;
+  outline: 3px solid #000;
+}
+
+.grid__item {
+  padding-top: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  background-color: #9fa1a1;
+  border: 1px solid #000;
+}
+
+.grid :nth-child(1) {
+  background-color: crimson;
+}
+
+.grid :nth-child(2) {
+  background-color: darkmagenta;
+}
+
+.grid :nth-child(3) {
+  grid-column: 1 / -2; /* Hace que el tercer hijo ocupe desde la primera columna hasta la penúltima */
+  grid-row: 3 / -1; /* Hace que el tercer hijo ocupe desde la tercera fila hasta la última */
+  background-color: steelblue;
+}
+
+.grid :nth-child(4) {
+  background-color: brown;
+}
+
+.grid :nth-child(5) {
+  background-color: chocolate;
+}
+
+.grid :nth-child(6) {
+  background-color: midnightblue;
+}
+
+.grid :nth-child(16) {
+  grid-column: 10 / -2; /* Hace que el tercer hijo ocupe desde la decima columna hasta la penúltima */
+  grid-row: 2 / 4; /* Hace que el tercer hijo ocupe desde la segunda fila hasta la cuarta */
+  background-color: rgba(25, 112, 68, 0.87);
+}
