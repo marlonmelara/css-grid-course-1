@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #eef;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-auto-flow: column dense; /* Ubica automáticamente los elementos en columnas, llenando los huecos con el valor dense */
+  gap: 10px;
+  width: 90%;
+  max-width: 700px;
+  height: 500px;
+  margin: 20px auto;
+  background-color: #fff;
+  outline: 3px solid #000;
+}
+
+.grid__item {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.grid :nth-child(1) {
+  background-color: crimson;
+  grid-row: 3 / 5;
+}
+
+/** La propiedad grid-row en CSS es utilizada para definir la posición y el tamaño de un elemento dentro de la cuadrícula (grid) en términos de filas. Esta propiedad combina las funciones de grid-row-start y grid-row-end en una sola declaración.
+
+Sintaxis:
+element {
+  grid-row: start / end;
+} **/
+
+.grid :nth-child(2) {
+  background-color: darkmagenta;
+  grid-row: span 2; /* El elemento ocupa 2 filas, comenzando desde su posición natural */
+}
+
+.grid :nth-child(3) {
+  background-color: steelblue;
+  grid-column: 1 / -2;
+  grid-row: 3 / -1;
+}
+
+.grid :nth-child(4) {
+  background-color: brown;
+  grid-column: span 2;
+}
+
+.grid :nth-child(5) {
+  background-color: chocolate;
+}
+
+.grid :nth-child(6) {
+  background-color: midnightblue;
+}
