@@ -28,9 +28,16 @@ body {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Crea columnas flexibles que se ajustan automáticamente al contenedor, con un ancho mínimo de 250px y un máximo de 1fr */
   gap: 2.5rem;
 }
+
+/** repeat(auto-fit, ...): Usa auto-fit para ajustar el número de columnas automáticamente, expandiéndolas para llenar el espacio disponible.
+
+minmax(250px, 1fr): Define que cada columna debe tener un ancho mínimo de 250px y puede expandirse hasta una fracción del espacio disponible (1fr).*/
 
 .card {
   display: flex;
